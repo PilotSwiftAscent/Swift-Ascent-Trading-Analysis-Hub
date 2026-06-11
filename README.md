@@ -1,6 +1,6 @@
 # Swift Ascent Trading Analysis Hub
 
-A GitHub-ready repository containing 6 professional personas designed to improve trading documentation, strategy analysis, financial statistics, backtest review, and quantification workflows.
+A GitHub-ready repository containing six professional personas designed to improve trading documentation, strategy analysis, financial statistics, backtest review, trade advisory review, and quantification workflows.
 
 This repository is built for traders, EA developers, quant researchers, analysts, and trading system builders who need a structured way to review ideas before they become live systems.
 
@@ -17,7 +17,7 @@ Instead of asking a model to simply “review a strategy,” each persona focuse
 5. Trading Documentation Auditor
 6. Professional Trading Advisor
 
-Together, these personas help detect weak assumptions, poor testing, overfitting, vague strategy rules, poor risk control, and missing documentation.
+Together, these personas help detect weak assumptions, poor testing, overfitting, vague strategy rules, poor risk control, unclear trade logic, weak market context, and missing documentation.
 
 ## Repository Structure
 
@@ -32,7 +32,8 @@ analysis personas/
 │   ├── 02 financial statistician.md
 │   ├── 03 risk and portfolio analyst.md
 │   ├── 04 market regime analyst.md
-│   └── 05 trading documentation auditor.md
+│   ├── 05 trading documentation auditor.md
+│   └── 06 professional trading advisor.md
 │
 ├── templates/
 │   ├── persona usage template.md
@@ -58,7 +59,8 @@ Use this repository when you need to:
 - Convert a rough trading idea into structured documentation.
 - Check whether results are statistically meaningful.
 - Review risk exposure before live trading.
-- Prepare developer-ready prompts for Codex or another coding assistant.
+- Review chart-based trade ideas before execution.
+- Prepare developer-ready prompts for any capable AI assistant, coding assistant, or documentation workflow.
 - Build professional trading documentation for clients, partners, or internal use.
 
 ## Recommended Review Order
@@ -67,11 +69,12 @@ For best results, use the personas in this order:
 
 1. Trading Documentation Auditor
 2. Market Regime Analyst
-3. Quant Performance Analyst
-4. Financial Statistician
-5. Risk and Portfolio Analyst
+3. Professional Trading Advisor
+4. Quant Performance Analyst
+5. Financial Statistician
+6. Risk and Portfolio Analyst
 
-This order moves from strategy clarity to market fit, then performance, statistical reliability, and finally capital protection.
+This order moves from strategy clarity to market fit and trade quality, then performance, statistical reliability, and finally capital protection.
 
 ## Core Principle
 
@@ -85,15 +88,16 @@ A strategy should also have:
 - Controlled drawdown
 - Realistic execution assumptions
 - Symbol and timeframe awareness
+- Clean market-context logic
 - Risk controls that survive losing streaks
 - Documentation clear enough for a developer to implement correctly
 
 ## How To Use
 
-Copy the persona prompt you need, then paste your trading strategy, EA logic, backtest report, or documentation underneath it.
+Copy the persona prompt you need, then paste your trading strategy, EA logic, backtest report, chart idea, or documentation underneath it.
 
 For a complete review, use the full strategy review workflow inside the workflows folder.
 
 ## Important Note
 
-These personas do not guarantee profitable trading. They are designed to improve analysis quality, reduce weak assumptions, and make strategy development more disciplined.
+These personas do not guarantee profitable trading. They are designed to improve analysis quality, reduce weak assumptions, protect capital, and make strategy development more disciplined.
