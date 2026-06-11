@@ -104,7 +104,7 @@ Output required:
 - Position stacking risk.
 - Basket drawdown protection.
 
-### 8. EA Builder Skill
+### 8. EA Creator Skill
 
 Assemble the approved logic into EA-ready specifications.
 
