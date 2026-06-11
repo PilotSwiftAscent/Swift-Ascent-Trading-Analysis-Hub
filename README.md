@@ -1,6 +1,6 @@
 # Swift Ascent Trading Analysis Hub
 
-A GitHub-ready repository containing ten professional trading personas, reusable EA-building skills, templates, and workflows designed to improve trading documentation, strategy analysis, EA development, backtest validation, platform compliance, and risk control.
+A GitHub-ready repository containing ten professional trading personas, the EA Creator Skill, supporting skills, templates, and workflows designed to improve trading documentation, strategy analysis, EA development, backtest validation, platform compliance, and risk control.
 
 This repository is built for traders, EA developers, quant researchers, analysts, and trading system builders who need a structured way to review ideas before they become live systems.
 
@@ -44,7 +44,7 @@ analysis personas/
 │   └── 10 robust backtesting and validation advisor.md
 │
 ├── skills/
-│   ├── ea builder skill.md
+│   ├── ea creator skill.md
 │   ├── source knowledge map.md
 │   ├── strategy rule conversion skill.md
 │   └── validation and rejection skill.md
@@ -93,7 +93,7 @@ For institutional-grade EA development, use the resources in this order:
 5. Market Pattern and Algorithmic Behavior Analyst
 6. Professional Trading Advisor
 7. Institutional Hedging and Exposure Analyst
-8. EA Builder Skill
+8. EA Creator Skill
 9. EA Platform and Code Efficiency Advisor
 10. Quant Performance Analyst
 11. Financial Statistician
