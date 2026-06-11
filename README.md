@@ -1,6 +1,6 @@
-# Analysis Personas
+# Swift Ascent Trading Analysis Hub
 
-A GitHub-ready repository containing five professional personas designed to improve trading documentation, strategy analysis, financial statistics, backtest review, and quantification workflows.
+A GitHub-ready repository containing 6 professional personas designed to improve trading documentation, strategy analysis, financial statistics, backtest review, and quantification workflows.
 
 This repository is built for traders, EA developers, quant researchers, analysts, and trading system builders who need a structured way to review ideas before they become live systems.
 
@@ -15,6 +15,7 @@ Instead of asking a model to simply “review a strategy,” each persona focuse
 3. Risk and Portfolio Analyst
 4. Market Regime Analyst
 5. Trading Documentation Auditor
+6. Professional Trading Advisor
 
 Together, these personas help detect weak assumptions, poor testing, overfitting, vague strategy rules, poor risk control, and missing documentation.
 
