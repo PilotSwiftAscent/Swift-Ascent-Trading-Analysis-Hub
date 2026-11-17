@@ -1,134 +1,61 @@
 # Swift Ascent Trading Analysis Hub
 
-A GitHub-ready repository containing ten professional trading personas, the EA Creator Skill, supporting skills, templates, and workflows designed to improve trading documentation, strategy analysis, EA development, backtest validation, platform compliance, and risk control.
+A toolkit for reviewing trading strategies, backtests, and MetaTrader Expert Advisors (EAs). Use ten specialist personas, the EA Creator Skill, and reusable workflows and templates to validate strategy rules, testing assumptions, and exposure controls.
 
-This repository is built for traders, EA developers, quant researchers, analysts, and trading system builders who need a structured way to review ideas before they become live systems.
+**[Try the example prompt](examples/example%20prompt.md)** · [Browse workflows](workflows/) · [Browse personas](personas/)
+
+## How to use
+
+Choose a workflow, copy its prompt into your AI assistant, and add your strategy rules, EA specification, or backtest report. For a backtest review, include the test period, settings, trade count, and execution costs when available.
+
+| If you want to… | Start here | What to bring |
+| --- | --- | --- |
+| **Review a strategy** | [Full strategy review](workflows/full%20strategy%20review%20workflow.md) | Entry and exit rules, market and timeframe, and exposure limits |
+| **Audit a backtest** | [EA backtest review](workflows/ea%20backtest%20review%20workflow.md) | Tester report, parameter settings, and spread and commission assumptions |
+| **Develop an Expert Advisor** | [EA development workflow](workflows/institutional%20grade%20ea%20development%20workflow.md) | Strategy specification, target platform, and validation criteria |
+
+## Sample backtest review
+
+![Illustrative backtest review. Finding: Out-of-sample testing is missing. Evidence: The report only covers the period used to tune parameters. Next test: Lock the settings and test on an unseen period using documented execution costs.](assets/sample-backtest-review.png)
 
 ## Purpose
 
-The purpose of this repository is to create a repeatable review system for trading strategies, trading tools, and Expert Advisor development.
+Use the Hub to review a trading idea from several angles before it becomes a live system. The personas cover quantitative performance, statistics, risk and portfolio exposure, market regime, documentation, trading context, pattern analysis, hedging, platform efficiency, and robust backtest validation.
 
-Instead of asking a model to simply “review a strategy,” each persona or skill focuses on a specific role:
+## Repository structure
 
-1. Quant Performance Analyst
-2. Financial Statistician
-3. Risk and Portfolio Analyst
-4. Market Regime Analyst
-5. Trading Documentation Auditor
-6. Professional Trading Advisor
-7. Market Pattern and Algorithmic Behavior Analyst
-8. Institutional Hedging and Exposure Analyst
-9. EA Platform and Code Efficiency Advisor
-10. Robust Backtesting and Validation Advisor
+| Folder | Contents |
+| --- | --- |
+| [Personas](personas/) | Ten specialist roles for reviewing strategies, reports, and EA logic |
+| [Skills](skills/) | EA Creator, source mapping, strategy rule conversion, and validation and rejection |
+| [Templates](templates/) | Reusable forms for strategy documentation, backtest reviews, and quant audits |
+| [Workflows](workflows/) | Multi-step reviews for strategies, backtests, documentation, and EA development |
+| [Examples](examples/) | A prompt you can copy into your own review |
 
-Together, these resources help detect weak assumptions, poor testing, overfitting, vague strategy rules, platform mismatch, inefficient code, poor risk control, unclear trade logic, weak market context, fragile hedge behavior, and missing documentation.
+## Best use cases
 
-## Repository Structure
+- Translate a discretionary strategy into explicit rules, then review the conditions, exceptions, and exposure controls.
+- Check whether backtest evidence supports the conclusion. Review sample size, drawdown, execution assumptions, and robustness across test periods.
+- Review hedge behavior, platform fit, and code efficiency before implementing or refactoring an EA. Specify whether the target is MetaTrader 4 or MetaTrader 5.
+- Give reviewers a consistent format for documenting a strategy, a test result, or an implementation decision.
 
-```text
-analysis personas/
-│
-├── README.md
-├── LICENSE
-│
-├── personas/
-│   ├── 01 quant performance analyst.md
-│   ├── 02 financial statistician.md
-│   ├── 03 risk and portfolio analyst.md
-│   ├── 04 market regime analyst.md
-│   ├── 05 trading documentation auditor.md
-│   ├── 06 professional trading advisor.md
-│   ├── 07 market pattern and algorithmic behavior analyst.md
-│   ├── 08 institutional hedging and exposure analyst.md
-│   ├── 09 ea platform and code efficiency advisor.md
-│   └── 10 robust backtesting and validation advisor.md
-│
-├── skills/
-│   ├── ea creator skill.md
-│   ├── source knowledge map.md
-│   ├── strategy rule conversion skill.md
-│   └── validation and rejection skill.md
-│
-├── templates/
-│   ├── persona usage template.md
-│   ├── backtest review template.md
-│   ├── strategy documentation template.md
-│   └── quant audit report template.md
-│
-├── workflows/
-│   ├── full strategy review workflow.md
-│   ├── ea backtest review workflow.md
-│   ├── trading documentation workflow.md
-│   └── institutional grade ea development workflow.md
-│
-└── examples/
-    └── example prompt.md
-```
+## Recommended EA development order
 
-## Best Use Cases
+1. Map source material with the Source Knowledge Map, audit the documentation, and convert the strategy into explicit rules.
+2. Review the regime, market patterns, trading assumptions, hedging, and exposure with the relevant personas.
+3. Use the EA Creator Skill and EA Platform and Code Efficiency Advisor to define platform requirements and prepare the implementation.
+4. Review performance and statistical reliability, run robustness checks, and apply the Risk and Portfolio Analyst and Validation and Rejection Skill before deployment.
 
-Use this repository when you need to:
+Follow the [complete EA development workflow](workflows/institutional%20grade%20ea%20development%20workflow.md) for the full sequence.
 
-- Review an EA before coding or refactoring.
-- Convert a discretionary trading idea into mechanical EA rules.
-- Audit a trading strategy after a backtest.
-- Check whether results are statistically meaningful.
-- Review risk exposure before live trading.
-- Review chart-based trade ideas before execution.
-- Validate whether an EA is built for the correct platform.
-- Check whether MT4 and MT5 logic are being mixed incorrectly.
-- Reduce overcalculation and inefficient EA structure.
-- Review in-sample, out-of-sample, walk-forward, and Monte Carlo test quality.
-- Prepare developer-ready prompts for any capable AI assistant, coding assistant, or documentation workflow.
-- Build professional trading documentation for clients, partners, or internal use.
+## Core principle
 
-## Recommended EA Development Order
+Check clear rules, sufficient trades, stable performance, drawdown, realistic execution, and the target platform together. Use out-of-sample, walk-forward, and Monte Carlo checks where appropriate for the strategy and data.
 
-For institutional-grade EA development, use the resources in this order:
+## Important note
 
-1. Source Knowledge Map
-2. Trading Documentation Auditor
-3. Strategy Rule Conversion Skill
-4. Market Regime Analyst
-5. Market Pattern and Algorithmic Behavior Analyst
-6. Professional Trading Advisor
-7. Institutional Hedging and Exposure Analyst
-8. EA Creator Skill
-9. EA Platform and Code Efficiency Advisor
-10. Quant Performance Analyst
-11. Financial Statistician
-12. Robust Backtesting and Validation Advisor
-13. Risk and Portfolio Analyst
-14. Validation and Rejection Skill
+These resources support structured analysis and validation. They do not guarantee profitable trading. The review above is illustrative.
 
-This order moves from source concept to strategy clarity, market behavior, EA-ready rules, platform correctness, performance quality, statistical reliability, robustness validation, and final capital protection.
+## License
 
-## Core Principle
-
-A profitable backtest is not enough.
-
-A strategy should also have:
-
-- Clear rules
-- Enough trades
-- Stable performance
-- Controlled drawdown
-- Realistic execution assumptions
-- Symbol and timeframe awareness
-- Clean market-context logic
-- Correct platform targeting
-- Efficient code structure
-- In-sample and out-of-sample validation
-- Monte Carlo stress testing
-- Risk controls that survive losing streaks
-- Documentation clear enough for a developer to implement correctly
-
-## How To Use
-
-Copy the persona, skill, or workflow prompt you need, then paste your trading strategy, EA logic, backtest report, chart idea, or documentation underneath it.
-
-For a complete EA development review, use the institutional grade EA development workflow inside the workflows folder.
-
-## Important Note
-
-These personas and skills do not guarantee profitable trading. They are designed to improve analysis quality, reduce weak assumptions, protect capital, improve platform correctness, and make strategy development more disciplined.
+[MIT](LICENSE)
