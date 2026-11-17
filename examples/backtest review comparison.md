@@ -14,7 +14,7 @@ Review the supplied backtest packet for readiness to start a demo forward test.
 2. Check whether spread, commission, slippage, and delay are documented.
 3. Compare available results with the supplied acceptance criteria. Mark absent evidence as missing.
 4. Record each finding with its evidence ID and the next check or action.
-Choose Check failed if evidence shows a required criterion failed. Otherwise choose Evidence missing if a required check cannot be established. Choose Ready for demo forward testing only when the packet meets its stated criteria and records reviewer confirmation.
+Choose Check failed if a completed check produced a documented result outside its acceptance criteria. Otherwise choose Evidence missing if a required test has yet to run or its result is unavailable. Choose Ready for demo forward testing only when the packet meets its stated criteria and records reviewer confirmation.
 Use this output format: Outcome, followed by Findings with columns Finding, Evidence ID, and Next check or action.
 ```
 

@@ -81,8 +81,8 @@ Use the [Robust Backtesting and Validation Advisor](../personas/10%20robust%20ba
 
 ## Review Outcome
 
-- **Check failed** when documented evidence shows that a required criterion was missed. Name the criterion and cite the result. List missing evidence separately.
-- **Evidence missing** when the supplied material cannot establish whether all required checks are met. Identify what to obtain or rerun.
+- **Check failed** when a completed check produces a documented result outside its acceptance criteria. Name the criterion and cite the result. List missing evidence separately.
+- **Evidence missing** when a required test has yet to run or the supplied material cannot establish its result. Identify what to obtain or rerun.
 - **Ready for demo forward testing** when the supplied results meet the stated criteria and a reviewer confirms the key findings. Record the demo test plan and stop criteria.
 
 ## Final Output
