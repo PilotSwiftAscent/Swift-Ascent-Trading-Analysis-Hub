@@ -1,9 +1,15 @@
 # Example Prompt
 
-Use this prompt when asking an assistant or coding model to review a trading system using the repository personas.
+Use this prompt to review a trading strategy or backtest with five roles from the Hub. Give your assistant access to these files or paste their contents alongside the prompt.
+
+1. [Trading Documentation Auditor](../personas/05%20trading%20documentation%20auditor.md)
+2. [Market Regime Analyst](../personas/04%20market%20regime%20analyst.md)
+3. [Quant Performance Analyst](../personas/01%20quant%20performance%20analyst.md)
+4. [Financial Statistician](../personas/02%20financial%20statistician.md)
+5. [Risk and Portfolio Analyst](../personas/03%20risk%20and%20portfolio%20analyst.md)
 
 ```text
-I want you to review the trading strategy below using the five Analysis Personas.
+Review the strategy or backtest below using the five roles listed here.
 
 Use this order:
 
