@@ -1,6 +1,6 @@
 # Backtest Review Comparison
 
-Use these fictional cases to check whether the Hub’s personas improve issue detection and evidence use. The cases provide a small manual benchmark. Record your own results and expand the fixture set before drawing conclusions about review accuracy.
+Use these cases to check whether the Hub’s personas improve issue detection and evidence use. Three cases are fictional and one uses a real MT5 Strategy Tester export. See the [pilot results and review outputs](backtest%20review%20pilot%20results.md).
 
 ## Run the Comparison
 
@@ -13,7 +13,8 @@ Review the supplied backtest packet for readiness to start a demo forward test.
 1. Check whether the reported holdout was separate from parameter selection.
 2. Check whether spread, commission, slippage, and delay are documented.
 3. Compare available results with the supplied acceptance criteria. Mark absent evidence as missing.
-4. Record each finding with its evidence ID and the next check or action.
+4. Reconcile conflicting counts when the packet supports it.
+5. Record each finding with its evidence ID and the next check or action.
 Choose Check failed if a completed check produced a documented result outside its acceptance criteria. Otherwise choose Evidence missing if a required test has yet to run or its result is unavailable. Choose Ready for demo forward testing only when the packet meets its stated criteria and records reviewer confirmation.
 Use this output format: Outcome, followed by Findings with columns Finding, Evidence ID, and Next check or action.
 ```
@@ -42,6 +43,10 @@ Copy only the [input report table](worked%20backtest%20review.md#input-report) i
 | C3 | The review plan requires an untouched holdout with at least 60 trades, positive net P&L after costs, and at most 10% equity drawdown under cost stress. |
 | C4 | A human reviewer checked the tester and execution settings, confirmed the criteria were met, and recorded the demo plan and stop criteria. |
 
+### Case D
+
+Copy only the [review packet](mt5%20tester%20report%20case.md#review-packet) from the real MT5 Strategy Tester case.
+
 ## Scoring Key
 
 | Case | Expected outcome | Required findings |
@@ -49,6 +54,7 @@ Copy only the [input report table](worked%20backtest%20review.md#input-report) i
 | A | Evidence missing | Identify the missing holdout using A1/A2. Identify the incomplete execution assumptions using A4. |
 | B | Check failed | Cite B3/B4 and compare the observed 15.6% drawdown with the 12% limit. |
 | C | Ready for demo forward testing | Cite C1–C4 for the untouched window, measured results, stated criteria, and reviewer confirmation. |
+| D | Evidence missing | Reconcile 23 trades and 44 deal entries using D2/D3. Flag the unavailable holdout and selection evidence using D1/D4. Distinguish recorded zero commission from unverified cost assumptions using D3/D4. |
 
 For each case, record the correct outcome as yes or no, count required findings that cite the correct evidence, and count unsupported claims. For example, count an invented commission rate or a claim of live readiness as unsupported. Report raw per-case results for both conditions.
 

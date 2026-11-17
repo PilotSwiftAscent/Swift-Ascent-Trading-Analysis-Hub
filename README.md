@@ -1,8 +1,8 @@
 # Swift Ascent Trading Analysis Hub
 
-A toolkit for reviewing trading strategies, backtests, and MetaTrader Expert Advisors (EAs). Use ten specialist personas, the EA Creator Skill, and reusable workflows and templates to validate strategy rules, testing assumptions, and exposure controls.
+A toolkit for auditing MetaTrader backtests. Trace findings to the tester report, record missing evidence, and define the next test. The Hub also includes specialist review prompts and workflows for trading strategies and Expert Advisor (EA) development.
 
-**[Try the example prompt](examples/example%20prompt.md)** · [Browse workflows](workflows/) · [Browse personas](personas/)
+**[Read a real MT5 report review](examples/mt5%20tester%20report%20case.md)** · [Audit a backtest](workflows/ea%20backtest%20review%20workflow.md) · [Browse personas](personas/)
 
 ## How to use
 
@@ -18,7 +18,7 @@ Choose a workflow, copy its prompt into your AI assistant, and add your strategy
 
 ![Illustrative backtest review. Finding: Out-of-sample testing is missing. Evidence: The report only covers the period used to tune parameters. Next test: Lock the settings and test on an unseen period using documented execution costs.](assets/sample-backtest-review.png)
 
-Read the [worked backtest review](examples/worked%20backtest%20review.md) or use the [review comparison](examples/backtest%20review%20comparison.md) to compare the persona workflow with a plain checklist.
+Read the [annotated review of a real MT5 report](examples/mt5%20tester%20report%20case.md), try the [fictional worked example](examples/worked%20backtest%20review.md), or see the [checklist vs. personas pilot results](examples/backtest%20review%20pilot%20results.md).
 
 ## Purpose
 
@@ -32,7 +32,7 @@ Use the Hub to review a trading idea from several angles before it becomes a liv
 | [Skills](skills/) | EA Creator, source mapping, strategy rule conversion, and validation and rejection |
 | [Templates](templates/) | Reusable forms for strategy documentation, backtest reviews, and quant audits |
 | [Workflows](workflows/) | Multi-step reviews for strategies, backtests, documentation, and EA development |
-| [Examples](examples/) | A copyable prompt, a worked review, and a repeatable comparison |
+| [Examples](examples/) | A [copyable prompt](examples/example%20prompt.md), annotated reviews, and a repeatable comparison |
 
 ## Best use cases
 
