@@ -1,10 +1,10 @@
-# Institutional Grade EA Development Workflow
+# EA Development and Validation Workflow
 
 ## Purpose
 
 This workflow converts a trading idea into professional EA-ready logic using the repository personas and skills.
 
-It is designed to prevent weak, vague, platform-mismatched, overfit, or risk-heavy strategies from reaching live trading.
+It documents checks for ambiguous rules, platform mismatches, overfitting, and excessive exposure before deployment decisions.
 
 ## Core Principle
 
@@ -152,11 +152,11 @@ Output required:
 - Significance concerns.
 - Variance.
 - Expectancy.
-- Confidence level.
+- Evidence, limitations, and tests still needed.
 
 ### 12. Robust Backtesting and Validation Advisor
 
-Review in-sample, out-of-sample, walk-forward, Monte Carlo, and parameter stability results.
+Review in-sample, out-of-sample, walk-forward, Monte Carlo, and parameter stability results with the [EA Backtest Review Workflow](ea%20backtest%20review%20workflow.md).
 
 Output required:
 
@@ -165,11 +165,11 @@ Output required:
 - Walk-forward result.
 - Monte Carlo result.
 - Parameter stability.
-- Edge confidence.
+- Execution assumptions, evidence references, and missing tests.
 
 ### 13. Risk and Portfolio Analyst
 
-Make the final capital-protection decision.
+Document the exposure and drawdown evidence for the reviewer’s decision.
 
 Output required:
 
@@ -181,14 +181,14 @@ Output required:
 
 ### 14. Validation and Rejection Skill
 
-Make the final approval or rejection decision.
+Recommend the next stage and cite the evidence needed for the reviewer’s decision.
 
 Output required:
 
 - Approved for coding.
 - Approved for backtesting.
-- Approved for forward testing.
-- Not approved.
+- Ready for demo forward testing, subject to reviewer confirmation.
+- Evidence missing or check failed, with a reason and next test.
 
 ## Final EA Readiness Checklist
 
@@ -208,7 +208,7 @@ Before backtesting:
 - Duplicate entries are controlled.
 - Broker constraints are respected.
 
-Before forward testing:
+Before demo forward testing:
 
 - In-sample and out-of-sample tests are complete.
 - Monte Carlo stress test is complete.
@@ -218,7 +218,7 @@ Before forward testing:
 
 Before live trading:
 
-- Forward testing is complete.
+- Demo forward testing is complete and reviewed against its predefined criteria.
 - Broker execution is verified.
 - Risk limits are active.
 - Emergency stop rules exist.

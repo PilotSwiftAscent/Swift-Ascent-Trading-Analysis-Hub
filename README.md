@@ -11,12 +11,14 @@ Choose a workflow, copy its prompt into your AI assistant, and add your strategy
 | If you want to… | Start here | What to bring |
 | --- | --- | --- |
 | **Review a strategy** | [Full strategy review](workflows/full%20strategy%20review%20workflow.md) | Entry and exit rules, market and timeframe, and exposure limits |
-| **Audit a backtest** | [EA backtest review](workflows/ea%20backtest%20review%20workflow.md) | Tester report, parameter settings, and spread and commission assumptions |
-| **Develop an Expert Advisor** | [EA development workflow](workflows/institutional%20grade%20ea%20development%20workflow.md) | Strategy specification, target platform, and validation criteria |
+| **Audit a backtest** | [EA backtest review](workflows/ea%20backtest%20review%20workflow.md) | Tester report, optimization and holdout details, parameter settings, and execution assumptions |
+| **Develop an Expert Advisor** | [EA development and validation workflow](workflows/institutional%20grade%20ea%20development%20workflow.md) | Strategy specification, target platform, and validation criteria |
 
 ## Sample backtest review
 
 ![Illustrative backtest review. Finding: Out-of-sample testing is missing. Evidence: The report only covers the period used to tune parameters. Next test: Lock the settings and test on an unseen period using documented execution costs.](assets/sample-backtest-review.png)
+
+Read the [worked backtest review](examples/worked%20backtest%20review.md) or use the [review comparison](examples/backtest%20review%20comparison.md) to compare the persona workflow with a plain checklist.
 
 ## Purpose
 
@@ -30,7 +32,7 @@ Use the Hub to review a trading idea from several angles before it becomes a liv
 | [Skills](skills/) | EA Creator, source mapping, strategy rule conversion, and validation and rejection |
 | [Templates](templates/) | Reusable forms for strategy documentation, backtest reviews, and quant audits |
 | [Workflows](workflows/) | Multi-step reviews for strategies, backtests, documentation, and EA development |
-| [Examples](examples/) | A prompt you can copy into your own review |
+| [Examples](examples/) | A copyable prompt, a worked review, and a repeatable comparison |
 
 ## Best use cases
 

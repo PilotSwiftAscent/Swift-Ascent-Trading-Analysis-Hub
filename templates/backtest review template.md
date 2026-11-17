@@ -14,6 +14,12 @@
 Start Date:
 End Date:
 
+Optimization Period:
+Out-of-Sample Period:
+Was the Out-of-Sample Period Used to Revise Settings?:
+Configurations Tried and Selection Criterion:
+EA Version, Settings File, and Report or Trade Export Reference:
+
 ## Modeling Quality
 
 Example: Real ticks, every tick, one minute OHLC, open prices only.
@@ -52,11 +58,13 @@ Longest Losing Streak:
 Spread:
 Commission:
 Slippage:
+Execution Delay:
 Broker:
 Account Type:
 
 ## Initial Observations
 
+For each finding, record the report section, tester setting, or export that supports it. Record missing evidence and the next test required.
 
 ## Questions For Review
 
@@ -64,4 +72,4 @@ Account Type:
 2. Is the drawdown acceptable?
 3. Is the trade count enough?
 4. Is the strategy overfit?
-5. Is the strategy ready for forward testing?
+5. Does the evidence meet the stated criteria for demo forward testing?

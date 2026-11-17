@@ -1,6 +1,6 @@
 # EA Backtest Review Workflow
 
-Use this workflow when reviewing an Expert Advisor backtest.
+Use the [Backtest Review Template](../templates/backtest%20review%20template.md) to gather the tester report, settings, and applicable validation results. Record unavailable inputs as **Missing** and cite a report section, tester setting, input file, or trade export for each finding.
 
 ## Required Inputs
 
@@ -8,6 +8,7 @@ Use this workflow when reviewing an Expert Advisor backtest.
 - Symbol
 - Timeframe
 - Backtest period
+- Optimization and out-of-sample date ranges, selection criterion, and number of configurations tried, if optimized
 - Modeling type
 - Starting balance
 - Ending balance
@@ -19,12 +20,13 @@ Use this workflow when reviewing an Expert Advisor backtest.
 - Average loss
 - Largest win
 - Largest loss
-- Spread and commission assumptions
-- Screenshot or report summary, if available
+- Spread, commission, slippage, and execution-delay assumptions
+- Tester report, EA build and settings, and trade export, where available
+- Planned acceptance criteria and required evidence for demo forward testing
 
 ## Step 1: Performance Review
 
-Use the Quant Performance Analyst.
+Use the [Quant Performance Analyst](../personas/01%20quant%20performance%20analyst.md).
 
 Focus on:
 
@@ -38,7 +40,7 @@ Focus on:
 
 ## Step 2: Statistical Review
 
-Use the Financial Statistician.
+Use the [Financial Statistician](../personas/02%20financial%20statistician.md).
 
 Focus on:
 
@@ -49,7 +51,7 @@ Focus on:
 
 ## Step 3: Risk Review
 
-Use the Risk and Portfolio Analyst.
+Use the [Risk and Portfolio Analyst](../personas/03%20risk%20and%20portfolio%20analyst.md).
 
 Focus on:
 
@@ -60,13 +62,28 @@ Focus on:
 
 ## Step 4: Market Regime Review
 
-Use the Market Regime Analyst.
+Use the [Market Regime Analyst](../personas/04%20market%20regime%20analyst.md).
 
 Focus on:
 
 - Whether the EA performs only in certain market types
 - Whether trend, chop, compression, and breakout conditions should be separated
 - Whether the timeframe fits the intended holding time
+
+## Step 5: Robustness and Execution Review
+
+Use the [Robust Backtesting and Validation Advisor](../personas/10%20robust%20backtesting%20and%20validation%20advisor.md).
+
+- Check which period selected parameters and which evaluated them. If the evaluation period influenced further tuning, request a fresh holdout or another independent evaluation.
+- Compare in-sample and out-of-sample trade count, net results, and drawdown using consistent units. Check available walk-forward, parameter-stability, and stress-test results against the stated criteria.
+- Record which costs the tester modeled and which were assumed. Flag missing or unsupported spread, commission, slippage, or latency inputs when they materially affect the strategy.
+- Cite the evidence for each finding and identify the next test. See [MetaQuotes’ forward testing documentation](https://www.metatrader5.com/en/terminal/help/algotrading/strategy_optimization#forward) and [Bailey et al. on backtest overfitting](https://escholarship.org/content/qt4w1110bb/qt4w1110bb.pdf).
+
+## Review Outcome
+
+- **Check failed** when documented evidence shows that a required criterion was missed. Name the criterion and cite the result. List missing evidence separately.
+- **Evidence missing** when the supplied material cannot establish whether all required checks are met. Identify what to obtain or rerun.
+- **Ready for demo forward testing** when the supplied results meet the stated criteria and a reviewer confirms the key findings. Record the demo test plan and stop criteria.
 
 ## Final Output
 
@@ -78,26 +95,18 @@ Symbol:
 Timeframe:
 Backtest Period:
 
-Overall Result:
-Pass / Needs More Testing / Fail
+Outcome:
+Check failed / Evidence missing / Ready for demo forward testing
 
 Performance Summary:
 
-Statistical Confidence:
+Statistical and robustness evidence:
+Execution assumptions and evidence:
+Risk and market regime findings:
 
-Risk Rating:
+Finding | Evidence reference | Criterion or limitation | Next test
 
-Market Regime Fit:
-
-Main Problems Found:
-- 
-
-Recommended Fixes:
-- 
-
-Forward Test Requirements:
-- 
-
-Final Verdict:
+Missing artifacts or fields:
+Demo test criteria and reviewer confirmation, if applicable:
 
 ```
