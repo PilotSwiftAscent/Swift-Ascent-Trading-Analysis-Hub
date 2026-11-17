@@ -20,6 +20,13 @@ Choose a workflow, copy its prompt into your AI assistant, and add your strategy
 
 Read the [annotated review of a real MT5 report](examples/mt5%20tester%20report%20case.md), try the [fictional worked example](examples/worked%20backtest%20review.md), or see the [checklist vs. personas pilot results](examples/backtest%20review%20pilot%20results.md).
 
+## Local MT5 tools
+
+| Tool | Use it to |
+| --- | --- |
+| [Report checker](tools/README.md#report-checker) | Turn a Strategy Tester HTML export into a Markdown evidence packet |
+| [Live dashboard](tools/README.md#live-dashboard) | Monitor equity, positions, pending orders, and quotes from a connected MT5 account |
+
 ## Purpose
 
 Use the Hub to review a trading idea from several angles before it becomes a live system. The personas cover quantitative performance, statistics, risk and portfolio exposure, market regime, documentation, trading context, pattern analysis, hedging, platform efficiency, and robust backtest validation.

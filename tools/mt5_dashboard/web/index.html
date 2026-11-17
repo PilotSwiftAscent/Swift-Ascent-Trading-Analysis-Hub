@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Swift Ascent | MT5 Monitor</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/dashboard.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>Swift Ascent</span></div>
+      <div class="feed" id="feed" data-state="connecting" role="status"><span class="status-dot" aria-hidden="true"></span><span id="feed-label">Connecting</span></div>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <div class="overview-heading">
+      <div>
+        <h1>MT5 Monitor</h1>
+        <p class="subtitle">Account equity, positions, and pending orders</p>
+      </div>
+      <div class="refresh-controls">
+        <span id="updated">Waiting for account data</span>
+        <button id="refresh" type="button">Refresh</button>
+      </div>
+    </div>
+    <p class="notice" id="notice" role="status" hidden></p>
+
+    <dl class="account-strip" aria-label="Account summary">
+      <div class="account-metric equity-metric"><dt>Equity</dt><dd id="equity">—</dd><dd class="metric-unit" id="currency" hidden></dd></div>
+      <div class="account-metric"><dt>Balance</dt><dd id="balance">—</dd></div>
+      <div class="account-metric"><dt>Floating P/L</dt><dd id="floating">—</dd></div>
+      <div class="account-metric"><dt>Free margin</dt><dd id="margin">—</dd><dd class="metric-unit" id="margin-level" hidden></dd></div>
+    </dl>
+
+    <div class="market-grid">
+      <section class="panel chart-panel" aria-labelledby="equity-heading">
+        <div class="panel-heading"><h2 id="equity-heading">Session equity</h2><span class="chart-context" id="chart-context">Sampled as the monitor updates</span></div>
+        <div class="chart-frame">
+          <canvas id="equity-chart" role="img" aria-label="Session equity chart, waiting for data"></canvas>
+          <p id="chart-empty" class="chart-empty">Waiting for equity samples</p>
+        </div>
+      </section>
+
+      <section class="panel quote-panel" aria-labelledby="quotes-heading">
+        <div class="panel-heading"><h2 id="quotes-heading">Quotes</h2><span class="chart-context" id="quote-count"></span></div>
+        <div class="scroll-table quote-table">
+          <table aria-labelledby="quotes-heading">
+            <thead><tr><th scope="col">Symbol</th><th scope="col">Bid</th><th scope="col">Ask</th></tr></thead>
+            <tbody id="quote-body"></tbody>
+          </table>
+        </div>
+        <p id="quote-empty" class="empty-block">Quotes appear for symbols with positions or pending orders.</p>
+      </section>
+    </div>
+
+    <section class="panel positions-panel" aria-label="Positions and orders">
+      <div class="trade-controls">
+        <div class="trade-tabs" role="tablist" aria-label="Trading activity">
+          <button type="button" role="tab" id="positions-tab" aria-selected="true" aria-controls="trades-panel">Open positions <span id="positions-count">0</span></button>
+          <button type="button" role="tab" id="orders-tab" aria-selected="false" aria-controls="trades-panel" tabindex="-1">Pending orders <span id="orders-count">0</span></button>
+        </div>
+        <label class="filter" for="symbol-filter">Symbol <select id="symbol-filter"><option value="">All symbols</option></select></label>
+      </div>
+      <div id="trades-panel" role="tabpanel" aria-labelledby="positions-tab">
+        <div class="scroll-table trade-table">
+          <table aria-label="Open positions" id="trade-table">
+            <thead id="trade-head"></thead>
+            <tbody id="trade-body"></tbody>
+          </table>
+        </div>
+        <p id="trade-empty" class="empty-block">Waiting for the first account update.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
